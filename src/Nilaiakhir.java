@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Nilaiakhir {
     public static void main(String[] args) {
 
-        Scanner scanner - new Scanner(System.int);
+        Scanner scanner = new Scanner(System.in);
 
         // Konstanta bobot penilaian
         final double BOBOT_PRAKTIKUM = 0.30;
@@ -35,5 +35,20 @@ public class Nilaiakhir {
         double selisih = akhir - dibulatkan;
 
         boolean lulus = akhir >= 60;
+
+        System.out.println();
+
+        System.out.println("====== NILAI AKHIR ======");
+        System.out.printf("Praktikum : %.1f (30%%)%n", p);
+        System.out.printf("Tugas     : %.1f (20%%)%n", t);
+        System.out.printf("MID       : %.1f (20%%)%n", m);
+        System.out.printf("Final     : %.1f (30%%)%n", f);
+
+        System.out.printf("Nilai akhir : %.1f%n", akhir);
+        System.out.println("Dibulatkan  : " + dibulatkan);
+        System.out.println("Selisih     : " + selisih);
+        System.out.println("Lulus (>= 60) : " + lulus);
+
+        scanner.close();
     }
 }
