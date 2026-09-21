@@ -5,16 +5,35 @@ public class Nilaiakhir {
 
         Scanner scanner - new Scanner(System.int);
 
-        System.out.print("Nilai praktikum" );
-        double nilaiPraktikum = scanner.nextDouble();
+        // Konstanta bobot penilaian
+        final double BOBOT_PRAKTIKUM = 0.30;
+        final double BOBOT_TUGAS = 0.20;
+        final double BOBOT_MID = 0.20;
+        final double BOBOT_FINAL = 0.30;
 
-        System.out.print("Nilai tugas" );
-        double nilaiTugas = scanner.nextDouble();
+        // Input nilai dari pengguna
+        System.out.print("Nilai praktikum : ");
+        double p = scanner.nextDouble();
 
-        System.out.print("Nilai MID" );
-        double nilaiMID = scanner.nextDouble();
+        System.out.print("Nilai tugas     : ");
+        double t = scanner.nextDouble();
 
-        System.out.print("Nilai final" );
-        double nilaiFinal = scanner.nextDouble();
+        System.out.print("Nilai MID       : ");
+        double m = scanner.nextDouble();
+
+        System.out.print("Nilai final     : ");
+        double f = scanner.nextDouble();
+
+        double akhir = p * BOBOT_PRAKTIKUM
+                + t * BOBOT_TUGAS
+                + m * BOBOT_MID;
+
+        akhir += f * BOBOT_FINAL;
+
+        int dibulatkan = (int) akhir;
+
+        double selisih = akhir - dibulatkan;
+
+        boolean lulus = akhir >= 60;
     }
 }
